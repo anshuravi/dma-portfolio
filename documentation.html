@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Echoes of Fear Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            margin: auto;
+        }
+
+        .caption {
+            color: #FEFEFE; /* White text for contrast */
+            font-size: 16px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(27, 42, 51, 0.6); /* Gunmetal with slightly less transparency */
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 14px; /* Reduced padding for subtler arrows */
+            margin-top: -20px;
+            color: #FEFEFE; /* White arrows */
+            font-weight: bold;
+            font-size: 16px; /* Slightly smaller font size */
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(192, 148, 252, 0.5); /* Lavender Floral with more transparency */
+            z-index: 10; /* Ensure arrows are above other content */
+        }
+
+        /* Move the arrows outside the image area */
+        .prev {
+            left: -50px; /* Adjust this value to control how far outside the image the arrow appears */
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: -50px; /* Adjust this value to control how far outside the image the arrow appears */
+            border-radius: 0 3px 3px 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(224, 10, 125, 0.6); /* Mexican Pink hover effect toned down */
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+            background: rgba(199, 148, 252, 0.7); /* Lavender Floral with more transparency */
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 7px; /* Slightly smaller dots */
+            width: 7px; /* Slightly smaller dots */
+            margin: 0 5px;
+            background-color: rgba(178, 247, 239, 0.7); /* Softer Teal */
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: rgba(224, 10, 125, 0.7); /* Softer Mexican Pink for active or hover */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="content-wrapper">
+            <h1>Echoes of Fear: Documentation</h1>
+            <a href="resume.html" class="back-link" style="margin-top: 10px; display: inline-block;">← Back to
+                Resume</a>
+        </div>
+    </header>
+    <main class="content-wrapper">
+        <!-- Project Overview Section -->
+        <section class="resume-section">
+            <h2>Project Overview</h2>
+            <p>Echoes of Fear is a choose-your-own-adventure visual novel that explores the realms of fear through
+                interactive storytelling. The game allows players to navigate through different fears, making choices
+                that affect the outcome of the story. The project was made for San Jose State University's Fall 2024
+                Digital Media Art Exhibition, Press Play.</p>
+            <section class="resume-section">
+                <h2>Artist Statement</h2>
+                <p>In a clouded existential dread, I sit in the darkness of humanity, until I hear a calling to a land
+                    beyond our own, a land of fantasy. My artistic practice bridges this abyss between the real world
+                    and my inner fantastical one. I use the realms of interactive technology to spin tales of these
+                    fantastical lands to remember that there is still hope. The struggles I face in existence fall down
+                    the chasm with me as only in these enchanted tales do I rise valiantly.
+                    <br> <br>
+                    Portal into Echoes of Fear, a choose your own adventure story exploring my battles with fear. Follow
+                    the spirit of fear down the rabbit hole, confronting obstacles such as judgment, failure, change,
+                    and more. My desire is that as I have, many will immerse themselves within the story and confront
+                    their own reality. As I do, they will assume victory as their own hero dispels the darkness before
+                    the epilogue.</p>
+                <div id="overview-slideshow" class="slideshow-container">
+                    <div class="slides">
+                        <img src="images/Anshu-Ravi-Echoes-of-Fear.png" alt="First project image">
+                    </div>
+                    <div class="slides">
+                        <img src="images/Echoes_of_Fear_1.png" alt="Second project image">
+                    </div>
+                    <div class="slides">
+                        <img src="images/Echoes_of__Fear_3.png" alt="Third project image">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'overview')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'overview')">&#10095;</a>
+                </div>
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1, 'overview')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'overview')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'overview')"></span>
+                </div>
+            </section>
+        </section>
+        <section class="resume-section">
+            <h2>Process</h2>
+            <p>The milestones of completing this project included:</p>
+            <ol>
+                <li>Plan out the story branches in Twine</li>
+                <li>Input the story into Visual Studio Code with JavaScript for interactions, HTML for structure and CSS
+                    for styling.</li>
+                <li>Draw out illustrations with Autodesk Sketchbook and input them</li>
+                <li>Transfer everything to a USB and prepare for showcase setup</li>
+                <li>Showcase</li>
+            </ol>
+            <!-- Technologies Used Section -->
+            <section class="resume-section">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Autodesk Sketchbook</li>
+                </ul>
+            </section>
+
+            <!-- Showcase Documentation Section -->
+            <section class="resume-section">
+                <h2>Showcase Documentation</h2>
+                <br>
+                <div id="showcase-slideshow" class="slideshow-container">
+                    <div class="slides">
+                        <img src="images/setup-1.jpg" alt="Setting up the project">
+                        <div class="caption">Initial Setup</div>
+                    </div>
+                    <div class="slides">
+                        <img src="images/echoes-of-fear.jpg" alt="Echoes of Fear project">
+                        <div class="caption">Pre-Show</div>
+                    </div>
+                    <div class="slides">
+                        <img src="images/full-show.jpg" alt="Full showcase view">
+                        <div class="caption">Full Exhibition View</div>
+                    </div>
+                    <div class="slides">
+                        <img src="images/showcase-2.jpg" alt="Showcase setup">
+                        <div class="caption">Live Showcase</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'showcase')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'showcase')">&#10095;</a>
+                </div>
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1, 'showcase')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'showcase')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'showcase')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'showcase')"></span>
+                </div>
+            </section>
+    </main>
+    <script>
+        let slideIndexes = {
+            overview: 1,
+            showcase: 1
+        };
+
+        function showSlides(n, slideshow) {
+            let i;
+            const container = document.getElementById(`${slideshow}-slideshow`);
+            const slides = container.getElementsByClassName("slides");
+            const dots = document.querySelectorAll(`#${slideshow}-slideshow ~ .dot-container .dot`);
+            if (n > slides.length) slideIndexes[slideshow] = 1;
+            if (n < 1) slideIndexes[slideshow] = slides.length;
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexes[slideshow] - 1].style.display = "block";
+            dots[slideIndexes[slideshow] - 1].className += " active";
+        }
+
+        function plusSlides(n, slideshow) {
+            showSlides(slideIndexes[slideshow] += n, slideshow);
+        }
+
+        function currentSlide(n, slideshow) {
+            showSlides(slideIndexes[slideshow] = n, slideshow);
+        }
+
+        // Initialize both slideshows
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlides(1, 'overview');
+            showSlides(1, 'showcase');
+        });
+    </script>
+</body>
+<footer>
+    <!-- Start content edits below this line. -->
+    <p>© 2024 by Anshu Ravi | <a href="anshu.ravi2002@gmail.com">anshu.ravi2002@gmail.com</a></p>
+
+    <!-- Add or remove any networks. -->
+    <ul class="socials">
+      <li>
+        <a href="https://www.linkedin.com/in/anshu-ravi-61121a263/" target="_blank"> <img
+            src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+      </li>
+    </ul>
+
+    <!-- End content edits here. -->
+  </footer>
+
+</html>
